@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  justify-content: center;
+  display: flex;
+}
+label {
+  margin-right: 5px;
+}
+.inputField {
+  width: 400px;
+}
+.box {
+  margin: 40px 0px;
+}
+.task {
+  display: flex;
+  gap: 10px;
+  width: 700px;
+  background-color: aqua;
+  margin: auto;
+}
+.task-description {
+  flex-grow: 1;
+}
+.active {
+  background-color: green;
+}
+.inactive {
+  background-color: grey;
+}
