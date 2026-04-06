@@ -15,7 +15,12 @@ export default function Input() {
     );
     setTasks(updatedTasks);
   };
-
+  const changeDescription = (index, newText) =>{
+    const updatedTasks = tasks.map((task, i) =>
+      i === index ? { ...task, description: newText } : task,
+    );
+    setTasks(updatedTasks);
+  }
   let createTask = (value) => {
     const currentDate = new Date();
     let newTask = {
@@ -57,6 +62,7 @@ export default function Input() {
               description={el.description}
               status={el.status}
               time={el.time}
+              changeDescription={()=> changeDescription(index, newText)}
             />
           );
         })}
